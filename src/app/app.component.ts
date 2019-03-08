@@ -12,6 +12,6 @@ export class AppComponent {
     dropdownPlaceholder: 'Selecciona el tipo de producto',
     isDisabled: false,
     requiredField : false,
-    defaultValue: 'defaultValue'
+    defaultValue: ''
   }
 }

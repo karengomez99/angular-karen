@@ -1,7 +1,6 @@
 <div class="floating-form">
   <div class="floating-label">
-    <select class="floating-select" id="floating-select" onclick="this.setAttribute('value', this.value);" value=""
-      [disabled]="props.isDisabled">
+    <select class="floating-select" (change)="onChange($event.target.value)" [attr.value]="selectedOption" [disabled]="props.isDisabled">
       <option class="dropdown-option" selected value="{{props.defaultValue}}">{{props.defaultValue}}</option>
       <option ngModel *ngFor='let option of props.dropdownArray' value="{{option}}" class="dropdown-option">{{option}}</option>
     </select>

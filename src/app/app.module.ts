@@ -3,14 +3,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     DropdownComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

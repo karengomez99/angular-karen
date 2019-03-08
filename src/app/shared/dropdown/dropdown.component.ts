@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { PromiseType } from 'protractor/built/plugins';
 
 @Component({
   selector: 'dropdown-component',
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss']
 })
-export class DropdownComponent {
+export class DropdownComponent implements OnInit {
 
   @Input() props: {
     dropdownArray: [];
@@ -15,5 +16,15 @@ export class DropdownComponent {
     defaultValue: string;
   };
 
-  constructor() { }
+  selectedOption: string;
+
+  constructor() {}
+
+  onChange(value) {
+    this.selectedOption = value;
+  }
+
+  ngOnInit() {
+    this.selectedOption = this.props.defaultValue;
+  }
 }
