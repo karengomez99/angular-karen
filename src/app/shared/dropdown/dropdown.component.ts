@@ -11,7 +11,8 @@ export class DropdownComponent {
     dropdownArray: [];
     dropdownPlaceholder: string;
     isDisabled: boolean;
-    requiredField: boolean
+    requiredField: boolean;
+    defaultValue: string;
   };
 
   constructor() { }

@@ -11,6 +11,7 @@ export class AppComponent {
     dropdownArray: ['Cuenta perfiles', 'Tarjeta de crédito', 'Seguros de vida'], 
     dropdownPlaceholder: 'Selecciona el tipo de producto',
     isDisabled: false,
-    requiredField : false
+    requiredField : false,
+    defaultValue: 'defaultValue'
   }
 }
