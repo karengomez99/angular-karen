@@ -29,7 +29,7 @@ select {
     height:30px;
     background-color: transparent;
     border:none;
-    border-bottom:1px solid #CCCCCC;
+    border-bottom:1px solid #b3b3b3;
   }
   
   .floating-select:focus {
@@ -38,7 +38,7 @@ select {
   }
   
   label {
-    color:#CCCCCC; 
+    color:#b3b3b3; 
     font-size:14px;
     font-weight:normal;
     position:absolute;
@@ -56,12 +56,9 @@ select {
     color:#3ABAED;
   }
 
-  //////////////////////////////////////////////////////
-
-  .container {
-      width: 100%;
-      height: 40px;
-      margin-top:70px;
-      margin-left:70px;
-      margin-top: 50px;
-  }
+.span-optional {
+    color: #b3b3b3;
+    font-size: 13px;
+    float: right;
+    padding-right: 10px;
+}
