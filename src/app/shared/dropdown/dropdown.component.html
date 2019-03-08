@@ -1,10 +1,10 @@
 <div class="floating-form">
   <div class="floating-label">
     <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
-      <option ngModel *ngFor='let option of dropdownArray' value="option">{{option}}</option>
+      <option class="dropdown-option" selected></option>
+      <option ngModel *ngFor='let option of dropdownArray' value="{{option}}" class="dropdown-option">{{option}}</option>
     </select>
-    <span class="highlight"></span>
-    <label>Selecciona el tipo de producto</label>
+    <label class="dropdown-label">Selecciona el tipo de producto</label>
   </div>
   <span class="span-optional">Opcional</span>
 </div>

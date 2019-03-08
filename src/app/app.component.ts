@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  dropdownOptions = ['-', 'Arepas', 'Tacos', 'Flauticas'];
+  dropdownOptions = ['Arepas', 'Tacos', 'Flauticas'];
 
 }

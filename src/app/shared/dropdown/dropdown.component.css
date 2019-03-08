@@ -1,64 +1,75 @@
-select {
-    background-image: url(../../../assets/images/arrow-down.png); 
-    background-repeat: no-repeat;
-    background-position: right center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    }
-
 .floating-form {
-    width:320px;
-    margin-top:70px;
-    margin-left:70px;
-  }
+  width: 100%;
+}
   
-  .floating-label { 
-    position:relative;  
-    margin-top: 25px;
-    margin-left: 10px;
-    margin-right: 5px;
-  }
+.floating-label { 
+  position: relative;
+  width: 100%;
+}
 
-  .floating-select {
-    font-size:14px;
-    padding:4px 4px;
-    display:block;
-    width:100%;
-    height:30px;
-    background-color: transparent;
-    border:none;
-    border-bottom:1px solid #b3b3b3;
-  }
+.floating-select {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-top: 20px;
+  width: 100%;
+  height: 55px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #b3b3b3;
+  background-image: url(../../../assets/images/arrow-down.png); 
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 5px);
+  background-position-y: calc(100% - 5px);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.2s ease 0.1s;
+  -moz-transition: all 0.2s ease 1s; 
+  -webkit-transition: all 0.2s ease 0.1s;
+}
   
-  .floating-select:focus {
-       outline:none;
-       border-bottom:2px solid #3ABAED; 
-  }
+.floating-select:focus {
+  outline: none;
+  border-bottom: 2px solid #3ABAED; 
+}
   
-  label {
-    color:#b3b3b3; 
-    font-size:14px;
-    font-weight:normal;
-    position:absolute;
-    pointer-events:none;
-    left:5px;
-    top:5px;
-    transition:0.2s ease all; 
-    -moz-transition:0.2s ease all; 
-    -webkit-transition:0.2s ease all;
-  }
-  
-  .floating-select:focus ~ label , .floating-select:not([value=""]):valid ~ label {
-    top:-18px;
-    font-size:14px;
-    color:#3ABAED;
-  }
+.dropdown-label {
+  color:#b3b3b3; 
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  bottom: 0;
+  transition: all 0.2s ease 0.1s;
+  -moz-transition: all 0.2s ease 1s; 
+  -webkit-transition: all 0.2s ease 0.1s;
+}
 
 .span-optional {
-    color: #b3b3b3;
-    font-size: 13px;
-    float: right;
-    padding-right: 10px;
+  color: #b3b3b3;
+  font-size: 13px;
+  float: right;
+  padding-right: 10px;
+}
+
+.floating-select:focus + label, .floating-select:not([value=""]) + label {
+  bottom: 20px;
+  font-size: 14px;
+  color: #3ABAED;
+}
+
+.floating-select:not(:focus) + label {
+  color: #b3b3b3;
+}
+
+.floating-select:not(:focus).floating-select:not([value=""]) {
+  border: 1px solid #b3b3b3;
+  border-radius: 2px;
+}
+
+.floating-select:disabled, .floating-select:disabled.floating-select:not([value=""]) {
+  border: none;
+  border-radius: 2px;
+  background-color: #eeeeee;
 }
