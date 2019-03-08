@@ -1,6 +1,6 @@
 <div class="floating-form">
   <div class="floating-label">
-    <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
+    <select class="floating-select" id="floating-select" onclick="this.setAttribute('value', this.value);" value="">
       <option class="dropdown-option" selected></option>
       <option ngModel *ngFor='let option of dropdownArray' value="{{option}}" class="dropdown-option">{{option}}</option>
     </select>
