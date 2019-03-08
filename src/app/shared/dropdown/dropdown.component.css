@@ -16,7 +16,7 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #b3b3b3;
-  background-image: url(../../../assets/images/arrow-down.png); 
+  background-image: url(../../../assets/images/arrow-down.svg);
   background-repeat: no-repeat;
   background-position-x: calc(100% - 5px);
   background-position-y: calc(100% - 5px);
@@ -31,6 +31,7 @@
 .floating-select:focus {
   outline: none;
   border-bottom: 2px solid #3ABAED; 
+  background-image: url(../../../assets/images/arrow-down-blue.svg);
 }
   
 .dropdown-label {
