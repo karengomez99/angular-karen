@@ -1,10 +1,11 @@
 <div class="floating-form">
   <div class="floating-label">
-    <select class="floating-select" id="floating-select" onclick="this.setAttribute('value', this.value);" value="">
-      <option class="dropdown-option" selected></option>
-      <option ngModel *ngFor='let option of dropdownArray' value="{{option}}" class="dropdown-option">{{option}}</option>
+    <select class="floating-select" id="floating-select" onclick="this.setAttribute('value', this.value);" value=""
+      [disabled]="props.isDisabled">
+      <option class="dropdown-option" selected value="{{props.defaultValue}}">{{props.defaultValue}}</option>
+      <option ngModel *ngFor='let option of props.dropdownArray' value="{{option}}" class="dropdown-option">{{option}}</option>
     </select>
-    <label class="dropdown-label">Selecciona el tipo de producto</label>
+    <label class="dropdown-label">{{props.dropdownPlaceholder}}</label>
   </div>
-  <span class="span-optional">Opcional</span>
+  <span *ngIf="!props.requiredField" class="span-optional">Opcional</span>
 </div>

@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  dropdownOptions = ['Arepas', 'Tacos', 'Flauticas'];
-
+  private myProps = {
+    dropdownArray: ['Cuenta perfiles', 'Tarjeta de crédito', 'Seguros de vida'], 
+    dropdownPlaceholder: 'Selecciona el tipo de producto',
+    isDisabled: false,
+    requiredField : false
+  }
 }

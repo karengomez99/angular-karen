@@ -1,17 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'dropdown-component',
   templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.css']
+  styleUrls: ['./dropdown.component.scss']
 })
-export class DropdownComponent implements OnInit {
+export class DropdownComponent {
 
-  @Input() dropdownArray = [];
+  @Input() props: {
+    dropdownArray: [];
+    dropdownPlaceholder: string;
+    isDisabled: boolean;
+    requiredField: boolean
+  };
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }

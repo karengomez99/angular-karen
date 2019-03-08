@@ -1,21 +1,25 @@
+$main-width: 100%;
+$color-primary: #3ABAED;
+$color-secondary: #b3b3b3;
+
 .floating-form {
-  width: 100%;
+  width: $main-width;
 }
   
 .floating-label { 
   position: relative;
-  width: 100%;
+  width: $main-width;
 }
 
 .floating-select {
   font-size: 14px;
   padding-left: 10px;
   padding-top: 20px;
-  width: 100%;
+  width: $main-width;
   height: 55px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #b3b3b3;
+  border-bottom: 1px solid $color-secondary;
   background-image: url(../../../assets/images/arrow-down.svg);
   background-repeat: no-repeat;
   background-position-x: calc(100% - 5px);
@@ -30,12 +34,12 @@
   
 .floating-select:focus {
   outline: none;
-  border-bottom: 2px solid #3ABAED; 
+  border-bottom: 2px solid $color-primary; 
   background-image: url(../../../assets/images/arrow-down-blue.svg);
 }
   
 .dropdown-label {
-  color:#b3b3b3; 
+  color: $color-secondary; 
   font-size: 14px;
   font-weight: normal;
   position: absolute;
@@ -48,7 +52,7 @@
 }
 
 .span-optional {
-  color: #b3b3b3;
+  color: $color-secondary;
   font-size: 13px;
   float: right;
   padding-right: 10px;
@@ -57,15 +61,15 @@
 .floating-select:focus + label, .floating-select:not([value=""]) + label {
   bottom: 20px;
   font-size: 14px;
-  color: #3ABAED;
+  color: $color-primary;
 }
 
 .floating-select:not(:focus) + label {
-  color: #b3b3b3;
+  color: $color-secondary;
 }
 
 .floating-select:not(:focus).floating-select:not([value=""]) {
-  border: 1px solid #b3b3b3;
+  border: 1px solid $color-secondary;
   border-radius: 2px;
 }
 
