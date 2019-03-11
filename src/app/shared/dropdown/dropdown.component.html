@@ -1,10 +1,10 @@
 <div class="floating-form">
-  <div class="floating-label">
+  <div class="label">
     <select class="floating-select" (change)="onChange($event.target.value)" [attr.value]="selectedOption" [disabled]="props.isDisabled">
       <option class="dropdown-option" selected value="{{props.defaultValue}}">{{props.defaultValue}}</option>
       <option ngModel *ngFor='let option of props.dropdownArray' value="{{option}}" class="dropdown-option">{{option}}</option>
     </select>
     <label class="dropdown-label">{{props.dropdownPlaceholder}}</label>
   </div>
-  <span *ngIf="!props.requiredField" class="span-optional">Opcional</span>
+  <span *ngIf="!props.requiredField" class="span">Opcional</span>
 </div>
