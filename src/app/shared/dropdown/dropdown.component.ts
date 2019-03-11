@@ -25,6 +25,6 @@ export class DropdownComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectedOption = this.props.defaultValue;
+    this.selectedOption = this.dropdownProperties.defaultValue;
   }
 }

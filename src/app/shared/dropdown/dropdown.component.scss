@@ -1,3 +1,4 @@
+
 $main-width: 100%;
 $color-primary: #3ABAED;
 $color-secondary: #B3B3B3;
@@ -18,6 +19,19 @@ $color-secondary: #B3B3B3;
     padding-right: 10px;
   }
 
+}
+
+.dropdown-label {
+  color: $color-secondary; 
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  bottom: 0px;
+  transition: all 0.2s ease 0.1s;
+  -moz-transition: all 0.2s ease 1s; 
+  -webkit-transition: all 0.2s ease 0.1s;
 }
 
 .floating-select {
@@ -45,38 +59,25 @@ $color-secondary: #B3B3B3;
     border-bottom: 2px solid $color-primary; 
     background-image: url(../../../assets/images/arrow-down-blue.svg);
   }
-}
 
-.floating-select:focus + label, .floating-select:not([value=""]) + label {
-  bottom: 28px;
-  font-size: 14px;
-  color: $color-primary;
-}
+  &:focus + label, &:not([value=""]) + label {
+    bottom: 20px;
+    font-size: 14px;
+    color: $color-primary;
+  }
 
-.floating-select:not(:focus) + label {
-  color: $color-secondary;
-}
+  &:not(:focus) + label {
+    color: $color-secondary;
+  }
+    
+  &:not(:focus).floating-select:not([value=""]) {
+    border: 1px solid $color-secondary;
+    border-radius: 2px;
+  }
 
-.floating-select:not(:focus).floating-select:not([value=""]) {
-  border: 1px solid $color-secondary;
-  border-radius: 2px;
-}
-
-.floating-select:disabled, .floating-select:disabled.floating-select:not([value=""]) {
-  border: none;
-  border-radius: 2px;
-  background-color: #eeeeee;
-}
-
-.dropdown-label {
-  color: $color-secondary; 
-  font-size: 14px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 10px;
-  bottom: 8px;
-  transition: all 0.2s ease 0.1s;
-  -moz-transition: all 0.2s ease 1s; 
-  -webkit-transition: all 0.2s ease 0.1s;
+  &:disabled, &:disabled.floating-select:not([value=""]) {
+    border: none;
+    border-radius: 2px;
+    background-color: #eeeeee;
+  }
 }
