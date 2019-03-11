@@ -8,7 +8,7 @@ import { PromiseType } from 'protractor/built/plugins';
 })
 export class DropdownComponent implements OnInit {
 
-  @Input() props: {
+  @Input() dropdownProperties: {
     dropdownArray: [];
     dropdownPlaceholder: string;
     isDisabled: boolean;
