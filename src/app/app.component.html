@@ -1,5 +1,9 @@
-<div class="col-4">
-  <dropdown-component
-    [dropdownProperties] = 'myProps'
-  ></dropdown-component>
+<div class="col-12">
+  <!--<dropdown-component
+    [dropdownProperties] = 'myProps'>
+  </dropdown-component>-->
+  <div style="margin: 40px">
+    <button (click)="throwError()">Error</button>
+    <button (click)="throwHttpError()">HTTP</button>
+  </div>
 </div>

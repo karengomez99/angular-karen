@@ -1,4 +1,4 @@
-<div class="floating-form">
+<div class="floating-form" *ngIf="isMobile">
   <div class="label">
     <select class="floating-select" (change)="onChange($event.target.value)" [attr.value]="selectedOption" [disabled]="dropdownProperties.isDisabled">
       <option selected value="{{dropdownProperties.defaultValue}}">{{dropdownProperties.defaultValue}}</option>
@@ -7,4 +7,9 @@
     <label class="dropdown-label">{{dropdownProperties.dropdownPlaceholder}}</label>
   </div>
   <span *ngIf="!dropdownProperties.requiredField" class="span">Opcional</span>
+</div>
+<br />
+<div class="field" *ngIf="!isMobile">
+  <input type="text" name="fullname" id="fullname" placeholder=" ">
+  <label for="fullname">{{dropdownProperties.dropdownPlaceholder}}</label>
 </div>

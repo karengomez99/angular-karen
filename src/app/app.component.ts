@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  private myProps = {
-    dropdownArray: ['Cuenta perfiles', 'Tarjeta de crédito', 'Seguros de vida'], 
-    dropdownPlaceholder: 'Selecciona el tipo de producto',
-    isDisabled: false,
-    requiredField : false,
-    defaultValue: ''
+  constructor(private appService: AppService){}
+
+  throwError(){
+    let foo = null;
+    foo.slice();
+    // let foo = () => { console.log('soy recursivo'); foo() }
+    // foo();
   }
+
+  throwHttpError(){
+    this.appService.getAllPost().subscribe(data => console.log('data', data));
+  }
+
 }

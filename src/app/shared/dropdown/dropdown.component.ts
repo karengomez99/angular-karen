@@ -8,6 +8,8 @@ import { PromiseType } from 'protractor/built/plugins';
 })
 export class DropdownComponent implements OnInit {
 
+  public isMobile : boolean = false;
+
   @Input() dropdownProperties: {
     dropdownArray: [];
     dropdownPlaceholder: string;
@@ -25,6 +27,10 @@ export class DropdownComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(window.screen.width);
+    if(window.screen.width < 740){
+      this.isMobile = true;
+    }
     this.selectedOption = this.dropdownProperties.defaultValue;
   }
 }
