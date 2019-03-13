@@ -1,9 +1,11 @@
-[
-  {
-    "NominaEjecutivo":"5031818",
-    "CajaEjecutivo":"1",
-    "SucursalEjecutivo":"100",
-    "Soeid":"FG80662",
-    "NombreEjecutivo":"GARCIA ZARATE FERNANDO"
+{
+  "ejecutivo": [
+    {
+      "NominaEjecutivo": 8237912837,
+      "CajaEjecutivo": 1
+    }
+  ],
+  "perfil": {
+    "SucursalEjecutivo": "100"
+  }
 }
-]
